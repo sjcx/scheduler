@@ -2,6 +2,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
+    @tutors = Tutor.find(:all, :order => :fname)
     @appointments = Appointment.all
 
     respond_to do |format|
@@ -10,6 +11,7 @@ class AppointmentsController < ApplicationController
     end
   end
 
+=begin
   # GET /appointments/1
   # GET /appointments/1.json
   def show
@@ -20,6 +22,7 @@ class AppointmentsController < ApplicationController
       format.json { render json: @appointment }
     end
   end
+=end
 
   # GET /appointments/new
   # GET /appointments/new.json
