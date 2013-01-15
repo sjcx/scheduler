@@ -1,7 +1,8 @@
 Scheduler::Application.routes.draw do
-  resources :tutors
 
   resources :students
+
+  resources :tutors  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -2,28 +2,14 @@
 
 one:
   fname: MyString
-  string: MyString
   lname: MyString
-  string: MyString
   program: MyString
-  string: MyString
   email: MyString
-  string: MyString
   password: MyString
-  string: MyString
-  banned: MyString
-  boolean: MyString
 
 two:
   fname: MyString
-  string: MyString
   lname: MyString
-  string: MyString
   program: MyString
-  string: MyString
   email: MyString
-  string: MyString
   password: MyString
-  string: MyString
-  banned: MyString
-  boolean: MyString

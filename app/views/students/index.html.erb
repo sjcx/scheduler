@@ -3,17 +3,10 @@
 <table>
   <tr>
     <th>Fname</th>
-    <th>String</th>
     <th>Lname</th>
-    <th>String</th>
     <th>Program</th>
-    <th>String</th>
     <th>Email</th>
-    <th>String</th>
     <th>Password</th>
-    <th>String</th>
-    <th>Banned</th>
-    <th>Boolean</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,17 +15,10 @@
 <% @students.each do |student| %>
   <tr>
     <td><%= student.fname %></td>
-    <td><%= student.string %></td>
     <td><%= student.lname %></td>
-    <td><%= student.string %></td>
     <td><%= student.program %></td>
-    <td><%= student.string %></td>
     <td><%= student.email %></td>
-    <td><%= student.string %></td>
     <td><%= student.password %></td>
-    <td><%= student.string %></td>
-    <td><%= student.banned %></td>
-    <td><%= student.boolean %></td>
     <td><%= link_to 'Show', student %></td>
     <td><%= link_to 'Edit', edit_student_path(student) %></td>
     <td><%= link_to 'Destroy', student, confirm: 'Are you sure?', method: :delete %></td>
