@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fname:</b>
+  <%= @tutor.fname %>
+</p>
+
+<p>
+  <b>Lname:</b>
+  <%= @tutor.lname %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @tutor.password %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @tutor.bio %>
+</p>
+
+
+<%= link_to 'Edit', edit_tutor_path(@tutor) %> |
+<%= link_to 'Back', tutors_path %>
