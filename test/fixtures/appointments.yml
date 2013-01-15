@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student_id: 1
+  tutor_id: 1
+  date: 2013-01-15
+  slot: 1
+
+two:
+  student_id: 1
+  tutor_id: 1
+  date: 2013-01-15
+  slot: 1

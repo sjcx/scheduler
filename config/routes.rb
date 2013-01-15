@@ -1,5 +1,7 @@
 Scheduler::Application.routes.draw do
 
+  resources :appointments
+
   resources :students
 
   resources :tutors  
