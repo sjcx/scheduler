@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @appointments = Appointment.where(:student_id.empty?)
+    @appointments = Appointment.find(:all, :conditions => "student_id IS NULL" )
 
     respond_to do |format|
       format.html # index.html.erb

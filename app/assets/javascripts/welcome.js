@@ -1,8 +1,17 @@
-$(function() {
+jQuery(function() {
   $('#datepicker').datepicker({ 
-    dateFormat: 'dd-mm-yy', 
+    dateFormat: "mmddyy", 
     onSelect: function(date){
-          console.log(date);
-        }
-      });
-    });
+      $.ajax
+        ({
+            type: "GET",
+            url: "/appointments/",
+            data: date,
+            success: function(result)
+            {
+              console.log(result);
+            }
+       })       
+      }
+    })
+});

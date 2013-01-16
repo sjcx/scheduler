@@ -11,7 +11,6 @@ class AppointmentsController < ApplicationController
     end
   end
 
-=begin
   # GET /appointments/1
   # GET /appointments/1.json
   def show
@@ -22,7 +21,7 @@ class AppointmentsController < ApplicationController
       format.json { render json: @appointment }
     end
   end
-=end
+
 
   # GET /appointments/new
   # GET /appointments/new.json
