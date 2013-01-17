@@ -8,13 +8,16 @@
 	<body>
 
 		Date: <div id="datepicker"></div>
-		<div="test"></div>
-		<div="appointmentlist">
-			<% @appointments.each do |appointment|%>
-			<p>
-			Tutor <%= appointment.tutor_id %>, <%= appointment.date %>  <%= link_to 'Select', edit_appointment_path(appointment) %>
-			</p>
-			<% end %>
-			</div>
+		<div id="appointmentlist">&nbsp;</div>
+		<!--
+		<%= render :partial => "appointmentresults" %>
+		
+		<% @appointments.each do |appointment|%>
+		<p>
+		Tutor <%= appointment.tutor_id %>, <%= appointment.date %>  <%= link_to 'Select', edit_appointment_path(appointment) %>
+		</p>
+		<% end %>
+		</div>
+		-->
 	</body>
 </html>

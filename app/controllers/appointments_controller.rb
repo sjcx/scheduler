@@ -2,9 +2,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    @tutors = Tutor.find(:all, :order => :fname)
-    @appointments = Appointment.all
-
+    @appointments = Appointment.find_all_by_date(params[:date])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @appointments }
