@@ -1,0 +1,19 @@
+<h2>Appointments</h2>
+
+<table>
+  <tr>
+    <th>Tutor</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appointments.each do |appointment| %>
+  <tr>
+    <td><%= appointment.tutor_id %></td>
+    <td><%= appointment.date %></td>
+    <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>>
+  </tr>
+<% end %>
+</table>
