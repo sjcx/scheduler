@@ -1,8 +1,12 @@
 Scheduler::Application.routes.draw do
 root :to => 'welcome#index'
+get "sign_up" => "students#new", :as => "sign_up"
+get "log_in" => "sessions#new", :as => "log_in"
+get "log_out" => "sessions#destroy", :as => "log_out"
 resources :appointments
 resources :students
 resources :tutors
+resources :sessions
 # The priority is based upon order of creation:
 # first created -> highest priority.
 # Sample of regular route:

@@ -31,6 +31,15 @@ class StudentsController < ApplicationController
       format.json { render json: @student }
     end
   end
+  
+  def create
+    @student = Student.new(params[:student])
+    if @student.save
+      redirect_to root_url, :notice => "Signed up!"
+    else
+      render "new"
+    end
+  end
 
   # GET /students/1/edit
   def edit
