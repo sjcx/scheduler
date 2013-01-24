@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_filter :authorize, :except => [:new]
   # GET /students
   # GET /students.json
   def index

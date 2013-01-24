@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+    before_filter :authorize, :except => [:index, :edit]
   # GET /appointments
   # GET /appointments.json
   def index

@@ -1,5 +1,5 @@
 class Tutor < ActiveRecord::Base
-attr_accessor :password
+  attr_accessor :password
   before_save :encrypt_password
 
   attr_accessor :password
@@ -14,16 +14,16 @@ attr_accessor :password
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
-  
+
   def self.authenticate(email, password)
-  tutor = find_by_email(email)
-  if tutor && tutor.password_hash == BCrypt::Engine.hash_secret(password, tutor.password_salt)
+    tutor = find_by_email(email)
+    if tutor && tutor.password_hash == BCrypt::Engine.hash_secret(password, tutor.password_salt)
     tutor
-  else
-    nil
+    else
+      nil
+    end
   end
-end
-  
+
   has_many :appointments
   has_many :students, :through => :appointments
 end

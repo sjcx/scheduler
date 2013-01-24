@@ -1,4 +1,5 @@
 class TutorsController < ApplicationController
+    before_filter :authorize
   # GET /tutors
   # GET /tutors.json
   def index
