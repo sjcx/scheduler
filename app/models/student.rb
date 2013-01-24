@@ -6,6 +6,7 @@ class Student < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_uniqueness_of :email
+  
   def encrypt_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt

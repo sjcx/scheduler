@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130123181406) do
+ActiveRecord::Schema.define(:version => 20130124175638) do
 
   create_table "appointments", :force => true do |t|
     t.integer  "student_id"
@@ -36,11 +36,12 @@ ActiveRecord::Schema.define(:version => 20130123181406) do
   create_table "tutors", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "password"
+    t.string   "password_hash"
     t.text     "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "email"
+    t.string   "password_salt"
   end
 
 end
