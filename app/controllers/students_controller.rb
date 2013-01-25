@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
-  before_filter :authorize, :except => [:new]
+  before_filter :require_login, :except => [:sign_up, :new]
+  before_filter :authorize, :except => [:sign_up, :new]
+  
   # GET /students
   # GET /students.json
   def index

@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -7,10 +8,10 @@ class SessionsController < ApplicationController
     tutor = Tutor.authenticate(params[:email], params[:password])
     if student
       session[:student_id] = student.id
-      redirect_to root_url, :notice => "Logged in!"
+      redirect_to student_dashboard_url, :notice => "Logged in!"
     else if tutor
         session[:tutor_id] = tutor.id
-        redirect_to root_url, :notice => "Logged in!"
+        redirect_to tutor_dashboard_url, :notice => "Logged in!"
       else
         flash.now.alert = "Invalid email or password"
         render "new"

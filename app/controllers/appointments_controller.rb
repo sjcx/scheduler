@@ -1,5 +1,7 @@
 class AppointmentsController < ApplicationController
-    before_filter :authorize, :except => [:index, :edit]
+    before_filter :require_login
+    before_filter :authorize, :except => [:index, :edit, :student_dashboard]
+    
   # GET /appointments
   # GET /appointments.json
   def index

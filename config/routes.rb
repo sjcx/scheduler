@@ -3,6 +3,8 @@ root :to => 'welcome#index'
 get "sign_up" => "students#new", :as => "sign_up"
 get "log_in" => "sessions#new", :as => "log_in"
 get "log_out" => "sessions#destroy", :as => "log_out"
+match 'student_dashboard' => 'appointments#student_dashboard'
+match 'tutor_dashboard' => 'appointments#tutor_dashboard'
 resources :appointments
 resources :students
 resources :tutors
